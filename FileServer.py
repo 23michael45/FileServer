@@ -151,8 +151,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
                     path = index
                     break
             else:
-                arkPath = os.path.join(path, "archive")
-                return self.list_directory(arkPath)
+##                arkPath = os.path.join(path, "archive")
+                return self.list_directory(path)
         ctype = self.guess_type(path)
         try:
             # Always read in binary mode. Opening files in text mode may cause
